@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-class NavButton extends Component{
+class BoxHeaderButton extends Component{
     constructor (props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -15,4 +15,4 @@ class NavButton extends Component{
     }
 }    
 
-export default NavButton;
+export default BoxHeaderButton;

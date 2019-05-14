@@ -1,15 +1,15 @@
 
 import React, {Component} from 'react';
 import './App.css';
-import Nav from './component/Header'
-import Button from './component/NavButton'
+import BoxHeader from './component/BoxHeader';
+import BoxHeaderButton from './component/BoxHeaderButton';
 
 class App extends Component {
   render () {
     return (
     <div>
-      <Nav/>
-      <Button/>
+      <BoxHeader/>
+      <BoxHeaderButton/>
     </div>  
     );
   }

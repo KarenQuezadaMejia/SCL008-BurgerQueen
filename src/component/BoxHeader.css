@@ -1,0 +1,18 @@
+
+.BoxHeader {
+  background-color: #282c34;
+  height: auto;
+}
+
+.BoxHeader_text{
+  color: white;
+}
+
+/* .Header{
+  background-color: #282c34;
+  }
+  
+  .HeaderNav{
+    background-color: #282c34;
+    color: white;
+  } */
