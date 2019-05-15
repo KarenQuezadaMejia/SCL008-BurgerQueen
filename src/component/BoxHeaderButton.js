@@ -1,6 +1,22 @@
 import React, {Component} from 'react';
+import './BoxHeaderButton.css';
+
 class BoxHeaderButton extends Component{
-    constructor (props){
+    render (){
+        return(
+            <div className= "BoxHeaderButton">
+                <button className="HeaderButton">Meser@</button>
+                <button className="HeaderButton">Cocina</button>
+            </div>
+        )
+    }
+
+
+
+}
+    export default BoxHeaderButton;
+
+   /*  constructor (props){
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
@@ -15,4 +31,4 @@ class BoxHeaderButton extends Component{
     }
 }    
 
-export default BoxHeaderButton;
+export default BoxHeaderButton; */
