@@ -7,14 +7,14 @@ class WaiterButton extends Component{
 
     }
 
-    lunch(){
+    render(){
 
         return (
             <article className="breakfast">
-            <div id= "containerMenu">
+            
             <BoxHeaderButton rol="Desayuno" customOnButtonClick={this.breakfast}/>
             <BoxHeaderButton rol="Almuerzo" customOnButtonClick={this.lunch}/>
-            </div>
+
             </article>
         )
     }

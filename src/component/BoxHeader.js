@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import ReactDom from 'react-dom';
 import './BoxHeader.css';
 import BoxHeaderLogo from '../logo.png';
 import BoxHeaderButton from './BoxHeaderButton';
@@ -7,20 +6,51 @@ import WaiterButton from './WaiterButton';
 import Kitchen from './Kitchen';
 
 class BoxHeader extends Component {
-  WaiterButton (){
-    ReactDom.render(<WaiterButton/>, document.getElementById('containerMenu'))
+  constructor(props){
+    super(props);
+    this.state = {
+      showKitchen: false,
+      showWaiter: true,
+    }
+
+    this.WaiterButtonFunc = this.WaiterButtonFunc.bind(this);
+    this.KitchenFunc = this.KitchenFunc.bind(this);
   }
-  Kitchen (){
-    ReactDom.render(<Kitchen/>, document.getElementById('conteinerMenu'))
+  WaiterButtonFunc (){
+    this.setState({
+      ...this.state,
+      showWaiter : true,
+      showKitchen : false
+    })
+  }
+  KitchenFunc (){
+    this.setState({
+      ...this.state,
+      showWaiter : false,
+      showKitchen : true
+    })
   }
   
   render () {
     return (
-    <div id= "BoxHeader">
+      <div>
+    <div className= "BoxHeader">
       <img src={BoxHeaderLogo} className = "BoxHeaderLogo" alt="logo"/>
-      <button className ="BoxHeaderButton" id="initbutton"> <BoxHeaderButton rol = "Meser@" customOnButtonClick ={this.WaiterButton}/></button>
-      <button className ="BoxHeaderButton" id="initbutton"> <BoxHeaderButton rol = "Cocina"customOnButtonClick ={this.Kitchen}/></button>
-    </div> 
+      <BoxHeaderButton rol = "Meser@" customOnButtonClick ={this.WaiterButtonFunc}/>
+      <BoxHeaderButton rol = "Cocina"customOnButtonClick ={this.KitchenFunc}/>
+    </div>
+    <div id="containerMenu">
+      {
+        this.state.showWaiter && 
+        <WaiterButton></WaiterButton>
+      }
+      {
+        this.state.showKitchen &&
+        <Kitchen></Kitchen>
+      }
+    </div>
+    </div>
+    
     );
   }
 }
