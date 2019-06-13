@@ -8,7 +8,7 @@ class Kitchen extends Component{
     render(){
 
         return (
-            <article className="breakfast">
+            <article className="orders">
             
             <h2>Hola</h2>
 

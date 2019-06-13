@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import './BoxHeader.css';
 import BoxHeaderLogo from '../logo.png';
-import BoxHeaderButton from './BoxHeaderButton';
-import WaiterButton from './WaiterButton';
+import Button from './Button';
+import Waiter from './Waiter';
 import Kitchen from './Kitchen';
 
 class BoxHeader extends Component {
@@ -10,13 +10,13 @@ class BoxHeader extends Component {
     super(props);
     this.state = {
       showKitchen: false,
-      showWaiter: true,
+      showWaiter: false,
     }
 
-    this.WaiterButtonFunc = this.WaiterButtonFunc.bind(this);
+    this.WaiterFunc = this.WaiterFunc.bind(this);
     this.KitchenFunc = this.KitchenFunc.bind(this);
   }
-  WaiterButtonFunc (){
+  WaiterFunc (){
     this.setState({
       ...this.state,
       showWaiter : true,
@@ -36,13 +36,17 @@ class BoxHeader extends Component {
       <div>
     <div className= "BoxHeader">
       <img src={BoxHeaderLogo} className = "BoxHeaderLogo" alt="logo"/>
-      <BoxHeaderButton rol = "Meser@" customOnButtonClick ={this.WaiterButtonFunc}/>
-      <BoxHeaderButton rol = "Cocina"customOnButtonClick ={this.KitchenFunc}/>
+      
+    </div>
+    <div id="options">
+    <Button rol = "Meser@" customOnButtonClick ={this.WaiterFunc}/>
+      <Button rol = "Cocina"customOnButtonClick ={this.KitchenFunc}/>
     </div>
     <div id="containerMenu">
+    
       {
         this.state.showWaiter && 
-        <WaiterButton></WaiterButton>
+        <Waiter></Waiter>
       }
       {
         this.state.showKitchen &&
@@ -55,4 +59,4 @@ class BoxHeader extends Component {
   }
 }
 
-export default BoxHeader;
+export default (BoxHeader);
