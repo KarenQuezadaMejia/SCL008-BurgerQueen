@@ -5,7 +5,7 @@ import reducer from '../reducer';
 import state from './initialState';
 
 export default createStore(
-/*   reducer,
-  state, */
+  reducer,
+  state, 
   composeWithDevTools(applyMiddleware(thunkMiddleware))
 );

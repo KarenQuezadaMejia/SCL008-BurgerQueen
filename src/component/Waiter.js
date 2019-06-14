@@ -4,7 +4,7 @@ import Button from './Button';
 import Breakfast from './Breakfast';
 import Lunch from './Lunch';
 import {connect} from 'react-redux';
-import Diner from './Client';
+import Client from './Client';
 
 class Waiter extends Component{
     constructor(props){
@@ -40,10 +40,15 @@ class Waiter extends Component{
 
         return (
             <div id="containerMenu">
-            <Client/>
+            
+             <Client/>
+             <div id = "dinerName"> 
+            {this.props.client.client}
+            </div>
+            <div id="boxitem">
             <Button rol = "Desayuno" customOnButtonClick ={this.BreakfastFunc}/>
             <Button rol="Almuerzo" customOnButtonClick={this.LunchFunc}/>
-            <div id="boxitem">
+            
             {
                 this.state.showBreakfast &&
                 <Breakfast></Breakfast>
