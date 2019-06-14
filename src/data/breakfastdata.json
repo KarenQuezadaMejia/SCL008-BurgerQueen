@@ -1,26 +1,4 @@
 {"breakfast": [
-<<<<<<< HEAD
-    {
-        "item": "Café Americano ",
-        "price": 700
-    },
-  
-    {
-        "item": "Café con Leche ",
-        "price": 1000
-    },
-  
-    {
-        "item": "Sandwich Jamón y Queso ",
-        "price": 1000
-    },
-  
-    {
-        "item": "Jugo Natural ",
-        "price": 700
-    }
-  ]}
-=======
   {
       "item": "Café Americano ",
       "price": 700
@@ -41,4 +19,3 @@
       "price": 700
   }
 ]}
->>>>>>> 56c421401794cc2cb49306e8fb50111fc1072d5b
