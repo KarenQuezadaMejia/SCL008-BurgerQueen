@@ -23,4 +23,8 @@ class breakfastmenu extends Component {
     );
   }
 }
+<<<<<<< HEAD
 export default (breakfastmenu);
+=======
+export default (breakfastmenu);
+>>>>>>> 56c421401794cc2cb49306e8fb50111fc1072d5b

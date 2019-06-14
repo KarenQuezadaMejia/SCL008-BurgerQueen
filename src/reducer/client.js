@@ -13,4 +13,8 @@ export default (
          }
          default: return state;
      }
+<<<<<<< HEAD
  }
+=======
+ }
+>>>>>>> 56c421401794cc2cb49306e8fb50111fc1072d5b

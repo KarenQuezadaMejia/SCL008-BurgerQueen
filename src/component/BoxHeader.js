@@ -40,7 +40,11 @@ class BoxHeader extends Component {
     </div>
     <div id="options">
     <Button rol = "Meser@" customOnButtonClick ={this.WaiterFunc}/>
+<<<<<<< HEAD
     <Button rol = "Cocina"customOnButtonClick ={this.KitchenFunc}/>
+=======
+      <Button rol = "Cocina"customOnButtonClick ={this.KitchenFunc}/>
+>>>>>>> 56c421401794cc2cb49306e8fb50111fc1072d5b
     </div>
     <div id="containerMenu">
     

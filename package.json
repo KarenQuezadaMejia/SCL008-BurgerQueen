@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.0.1",
     "babel-eslint": "^10.0.1",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
@@ -17,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predploy": "npm run build",
+    "deploy": "gh-pages -d build/"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +43,6 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0"
-  }
+  },
+  "homepage": "https://KarenQuezadaMejia.github.io/SCLO008-BurguerQueen/"
 }
